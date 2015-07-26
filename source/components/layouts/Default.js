@@ -1,23 +1,24 @@
 'use strict'
 
 import React from 'react'
+import { RouteHandler } from 'react-router'
 
-export default class Home extends React.Component {
+export default class Default extends React.Component {
   render() {
     return (
       <html>
         <head>
           <title>Spencer Elliott</title>
+          <script async src='/bundle.js'></script>
         </head>
         <body>
-          {this.props.children}
-          <script src='/bundle.js'></script>
+          <RouteHandler />
         </body>
       </html>
     )
   }
 }
 
-Home.propTypes = {
+Default.propTypes = {
   children: React.PropTypes.node
 }

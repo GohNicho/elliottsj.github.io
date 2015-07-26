@@ -1,14 +1,15 @@
 'use strict'
 
 import React from 'react'
-import { Route } from 'react-router'
+import { Route, DefaultRoute } from 'react-router'
 
-import Html from './components/Html'
-// import Home from './components/Home'
-import Projects from './components/Projects'
+import DefaultLayout from './components/layouts/Default'
+import Home from './components/pages/Home'
+import Projects from './components/pages/Projects'
 
-export default [
-  <Route path='/' component={Html}>
-    <Route path='/projects' component={Projects} />
+export default (
+  <Route path='/' handler={DefaultLayout}>
+    <DefaultRoute handler={Home} />
+    <Route path='projects' handler={Projects} />
   </Route>
-]
+)

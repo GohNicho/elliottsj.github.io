@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel-node node_modules/.bin/webpack",
-    "server": "webpack-dev-server",
+    "start": "babel-node node_modules/.bin/webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,11 +26,13 @@
     "eslint": "^0.22.1",
     "eslint-loader": "^0.14.0",
     "eslint-plugin-react": "^2.5.2",
+    "co": "^4.6.0",
+    "immutable": "^3.7.4",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "static-site-generator-webpack-plugin": "^1.0.0",
-    "webpack": "^1.9.11",
-    "webpack-dev-server": "^1.9.0"
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1"
   }
 }
